@@ -770,7 +770,7 @@ void Car()
      glBegin(GL_POLYGON);// car window 1
     glColor3f(0.98,0.83,0.84);
     glVertex2f(0.01,-.05);
-    glVertex2f(0.014,-.00);
+    glVertex2f(0.014,-.00);// hi
     glVertex2f(0.04,-.00);
     glVertex2f(0.04,-.05);
  glEnd();
