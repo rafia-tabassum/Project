@@ -22,18 +22,18 @@ void initRendering() {
 }
 
 //Called when the window is resized
-void handleResize(int w, int h) {
-	glViewport(0, 0, w, h);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(45.0, (float)w / (float)h, 1.0, 200.0);
-}
+//void handleResize(int w, int h) {
+//	glViewport(0, 0, w, h);
+//	glMatrixMode(GL_PROJECTION);
+//	glLoadIdentity();
+//	gluPerspective(45.0, (float)w / (float)h, 1.0, 200.0);
+//}
 
 void update(int value) {
 	glutPostRedisplay(); //Tell GLUT that the display has changed
 
-	//Tell GLUT to call update again in 25 milliseconds
-	glutTimerFunc(10, update, 0);
+	//Tell GLUT to call update again in 15 milliseconds
+	glutTimerFunc(15, update, 0);// msecs, function, value
 }
 
 double bus_move =  -1.0;
@@ -50,7 +50,7 @@ int coun =0;
 void specialKeys(int key, int x, int y) {
     switch (key) {
       case GLUT_KEY_UP:
-          frog_movey+=0.10;
+          frog_movey+=0.10;// frog jumping distance
           break;
       case GLUT_KEY_DOWN:
           frog_movey-=0.10;
@@ -69,7 +69,7 @@ void specialKeys(int key, int x, int y) {
 
 
 
-void circle(float x, float y, double r )
+void circle(float x, float y, double r )//for cloud1
 {
     float x1,y1;
 	glBegin(GL_POLYGON);
@@ -84,7 +84,7 @@ void circle(float x, float y, double r )
 	glEnd();
 }
 
-void drawcircle(float x, float y, double r )
+void drawcircle(float x, float y, double r )//for cloud2
 {
     float x1,y1;
 	glBegin(GL_POLYGON);
